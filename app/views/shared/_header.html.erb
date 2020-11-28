@@ -1,0 +1,16 @@
+<header class="top-pade-header">
+
+  <div class="nav">
+    <%= link_to 'Next Society', "#", class:"app-logo" %>
+    <ul class="head-list">
+      <li><%= link_to '自慢する', "#", class:"new-tweet"%></li>
+      <%# devise導入後に表示分岐 %>
+      <li><%= link_to 'ユーザー名', "#", class:"login-btn"%></li>
+    </ul>
+
+      <%# 登録してあればユーザーの写真を挿入する %>
+    <%= link_to image_tag("noname-icon.png", class:"user-icon"), "/" %>
+  </div>
+
+
+</header>
