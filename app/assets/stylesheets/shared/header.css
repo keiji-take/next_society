@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+}
+.nav {
+  display: flex;
+  background-color: navy;
+  height: 10vh;
+}
+.head-list{
+  display: flex;
+  margin-top: 25px;
+}
+.user-icon{
+  width: 70px;
+  height: 70px;
+}
+.new-tweet {
+  font-size: 20px;
+  color: white;
+  border: 1px solid black;
+  margin-right: 2vw;
+  padding: 18px ;
+}
+.login-btn{
+  font-size: 20px;
+  color: white;
+  border: black solid 1px;
+  padding: 18px;
+  margin-right: 7vw;
+}
+.app-logo{
+  font-size: 35px;
+  margin: 13px 50vw 0 2vw;
+  color: white;
+}

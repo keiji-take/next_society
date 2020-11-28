@@ -6,11 +6,10 @@
       <li><%= link_to '自慢する', "#", class:"new-tweet"%></li>
       <%# devise導入後に表示分岐 %>
       <li><%= link_to 'ユーザー名', "#", class:"login-btn"%></li>
-      
-      <%# 登録してあればユーザーの写真を挿入する %>
-      <li><%= link_to image_tag("noname-icon.png", class:"user-icon"), "/" %></li>
-
     </ul>
+
+      <%# 登録してあればユーザーの写真を挿入する %>
+    <%= link_to image_tag("noname-icon.png", class:"user-icon"), "/" %>
   </div>
 
 
