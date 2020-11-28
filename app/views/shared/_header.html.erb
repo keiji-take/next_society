@@ -5,7 +5,11 @@
     <ul class="head-list">
       <li><%= link_to '自慢する', "#", class:"new-tweet"%></li>
       <%# devise導入後に表示分岐 %>
-      <li><%= link_to 'ユーザー名', "#", class:"login-btn"%></li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'ユーザー名', "#", class:"login-btn"%></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_registration_path , class:"login-btn"%></li>
+      <% end %>
     </ul>
 
       <%# 登録してあればユーザーの写真を挿入する %>
