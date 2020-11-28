@@ -7,7 +7,7 @@
 }
 .nav {
   display: flex;
-  background-color: navy;
+  background-color: rgb(70, 70, 219);
   height: 10vh;
 }
 .head-list{
