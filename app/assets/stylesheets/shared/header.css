@@ -4,10 +4,11 @@
 .top-page-header {
   width: 100vw;
   padding: 2vh 15vw;
+  position: fixed;
 }
 .nav {
   display: flex;
-  background-color: rgb(70, 70, 219);
+  background-color: #272727;
   height: 10vh;
 }
 .head-list{
@@ -17,6 +18,7 @@
 .user-icon{
   width: 70px;
   height: 70px;
+  margin-top: 5px;
 }
 .new-tweet {
   font-size: 20px;

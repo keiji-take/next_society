@@ -1,14 +1,14 @@
 <header class="top-pade-header">
 
   <div class="nav">
-    <%= link_to 'Next Society', "#", class:"app-logo" %>
+    <%= link_to 'Next Society', root_path, class:"app-logo" %>
     <ul class="head-list">
-      <li><%= link_to '自慢する', "#", class:"new-tweet"%></li>
+      <li><%= link_to 'New Post', "#", class:"new-tweet"%></li>
       <%# devise導入後に表示分岐 %>
       <% if user_signed_in? %>
-        <li><%= link_to 'ユーザー名', "#", class:"login-btn"%></li>
+        <li><%= link_to current_user.name, destroy_user_session_path, method: :delete, class:"login-btn"%></li>
       <% else %>
-        <li><%= link_to 'ログイン', new_user_registration_path , class:"login-btn"%></li>
+        <li><%= link_to 'sign up', new_user_registration_path , class:"login-btn"%></li>
       <% end %>
     </ul>
 

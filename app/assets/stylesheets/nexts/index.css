@@ -1,4 +1,19 @@
 .main{
-  background-color: rgb(224, 224, 224);
+  background-color: #f8f8f8;
   width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 12vh;
+  box-sizing: border-box;
+}
+.low{
+  display: flex;
+}
+.left-bar{
+  width: 25vw;
+}
+.main-bar{
+  width: 50vw;
+}
+.right-bar{
+  width: 25vw;
 }
