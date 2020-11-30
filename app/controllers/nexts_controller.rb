@@ -1,10 +1,10 @@
 class NextsController < ApplicationController
 
   def index
-    @user
+    
   end
   def new
-    
+    @tweet = Tweet.new
   end
   def create
     
