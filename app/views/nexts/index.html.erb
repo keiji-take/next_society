@@ -4,21 +4,24 @@
   <div class="main">
     <div class="low">
       <div class="left-bar">
+        <%= link_to image_tag("test-image.png", class:"test-image") %>
         <ul class="job-list">
-          <li><%= link_to '営業', "#" %></li>
-          <li><%= link_to '企画', "#" %></li>
-          <li><%= link_to 'マーケティング', "#" %></li>
-          <li><%= link_to '事務', "#" %></li>
-          <li><%= link_to 'エンジニア', "#" %></li>
-          <li><%= link_to 'デザイナー', "#" %></li>
-          <li><%= link_to 'ライター', "#" %></li>
-          <li><%= link_to 'クリエイター', "#" %></li>
+          <li class="ocu-list" ><%= link_to '営業', "#" %></li>
+          <li class="ocu-list" ><%= link_to '企画', "#" %></li>
+          <li class="ocu-list" ><%= link_to 'マーケティング', "#" %></li>
+          <li class="ocu-list" ><%= link_to '事務', "#" %></li>
+          <li class="ocu-list" ><%= link_to 'エンジニア', "#" %></li>
+          <li class="ocu-list" ><%= link_to 'デザイナー', "#" %></li>
+          <li class="ocu-list" ><%= link_to 'ライター', "#" %></li>
+          <li class="ocu-list" ><%= link_to 'クリエイター', "#" %></li>
         </ul>
       </div>
       <div class="main-bar">
         投稿一覧
       </div>
       <div class="right-bar">
-      食べたい
+        食べたい
       </div>
     </div>
+
+<%= render "shared/footer"%>
