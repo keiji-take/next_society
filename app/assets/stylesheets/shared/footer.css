@@ -1,0 +1,17 @@
+
+.footer {
+  width: 100vw;
+  padding: 5vh 0;
+  color: #FFF;
+  background-color: #272727;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+.footer{
+  display: flex;
+  height: 8vh;
+}
+.copy-right{
+  margin: 0 auto;
+}

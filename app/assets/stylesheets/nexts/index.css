@@ -1,0 +1,28 @@
+.main{
+  background-color: #f8f8f8;
+  width: 100vw;
+  min-height: 78vh;
+  padding-bottom: 12vh;
+  box-sizing: border-box;
+}
+.low{
+  display: flex;
+}
+.left-bar{
+  width: 20vw;
+}
+.test-image{
+  width: 220px;
+  height: 220px;
+  border: solid;
+}
+.main-bar{
+  width: 55vw;
+}
+.right-bar{
+  width: 15vw;
+}
+.ocu-list{
+  margin-top: 10px;
+  text-align: center;
+}
