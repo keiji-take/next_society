@@ -1,12 +1,32 @@
-
-
-
-
-
-
+.tweet-main{
+  margin: 0 auto;
+}
+.tweet{
+  display: flex;
+}
+.tweet{
+  margin: 30px auto;
+}
+.tweet-list{
+  margin: 0 auto;
+}
+.input-label{
+  margin-right: 20px;
+}
+.tweet-occupation{
+  width: 8vw;
+}
+.tweet-boast{
+  width: 30vw;
+  height: 13vh;
+}
+.tweet-title{
+  width: 30vw;
+  height: 28px;
+}
 
 .tweet-btn{
   margin: 30px auto;
-  width: 50%;
+  width: 20%;
   color: aliceblue;
 }

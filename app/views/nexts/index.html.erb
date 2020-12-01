@@ -17,7 +17,30 @@
         </ul>
       </div>
       <div class="main-bar">
-        投稿一覧
+        <ul class="lists">
+          <% @tweets.each do |tweet| %>
+            <li class="tweet-box">
+              <%= link_to next_path(tweet.id) do %>
+              <div class="tweet-list">
+                <div class="user-img">
+                  <%= tweet.user.id %>
+                </div>
+                <div class="tweet-info">
+                  <span class="tweet-title">
+                    <%= tweet.title %>
+                  </span>
+                  <div class="tweet-occupation">
+                    <%= tweet.occupation.name %>
+                  </div>
+                  <div class="tweet-boast">
+                    <%= tweet.boast %>
+                  </div>
+                </div>
+              </div>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
       </div>
       <div class="right-bar">
         食べたい

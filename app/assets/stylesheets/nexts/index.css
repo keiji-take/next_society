@@ -19,6 +19,13 @@
 .main-bar{
   width: 55vw;
 }
+.tweet-box{
+  border: black;
+}
+.tweet-list{
+  display: flex;
+  
+}
 .right-bar{
   width: 15vw;
 }
