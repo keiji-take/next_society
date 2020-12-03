@@ -7,6 +7,9 @@ class Occupation < ActiveHash::Base
     { id: 5, name: "エンジニア"},
     { id: 6, name: "デザイナー"},
     { id: 7, name: "ライター"},
-    { id: 8, name: "クリエイター"}
+    { id: 8, name: "クリエイター"},
+    { id: 9, name: "その他"}
   ]
+  include ActiveHash::Associations
+  has_many :tweets
 end
