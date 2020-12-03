@@ -1,20 +1,21 @@
 <header class="top-pade-header">
+  <div class="nav-top">
+    <div class="nav">
+      <%= link_to 'Next Society', root_path, class:"app-logo" %>
+      <ul class="head-list">
+        <%# devise導入後に表示分岐 %>
+        <% if user_signed_in? %>
+          <li><%= link_to 'New Post', new_next_path, class:"new-tweet"%></li>
+          <li><%= link_to 'sign out', destroy_user_session_path, method: :delete, class:"login-btn"%></li>
+        <% else %>
+          <li><%= link_to 'New Post', new_user_registration_pathh, class:"new-tweet"%></li>
+          <li><%= link_to 'sign up', new_user_registration_path , class:"login-btn"%></li>
+        <% end %>
+      </ul>
 
-  <div class="nav">
-    <%= link_to 'Next Society', root_path, class:"app-logo" %>
-    <ul class="head-list">
-      <%# devise導入後に表示分岐 %>
-      <% if user_signed_in? %>
-        <li><%= link_to 'New Post', new_next_path, class:"new-tweet"%></li>
-        <li><%= link_to 'sign out', destroy_user_session_path, method: :delete, class:"login-btn"%></li>
-      <% else %>
-        <li><%= link_to 'New Post', new_user_registration_pathh, class:"new-tweet"%></li>
-        <li><%= link_to 'sign up', new_user_registration_path , class:"login-btn"%></li>
-      <% end %>
-    </ul>
-
-      <%# 登録してあればユーザーの写真を挿入する %>
-    <%= link_to image_tag("noname-icon.png", class:"user-icon"), "/" %>
+        <%# 登録してあればユーザーの写真を挿入する %>
+      <%= link_to image_tag("noname-icon.png", class:"user-icon"), "#" %>
+    </div>
   </div>
 
 

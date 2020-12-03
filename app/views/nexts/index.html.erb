@@ -17,13 +17,19 @@
         </ul>
       </div>
       <div class="main-bar">
+        <form class="search-form" action="#">
+          <input class='search-box' placeholder='キーワードから探す'>
+          <button class="search-button">
+            <%= image_tag "search.png", class:"search-icon" %>
+          </button>
+        </form>
         <ul class="lists">
           <% @tweets.each do |tweet| %>
             <li class="tweet-box">
               <%= link_to next_path(tweet.id) do %>
               <div class="tweet-list">
                 <div class="user-img">
-                  <%= tweet.user.id %>
+                  <%= tweet.user.name %>
                 </div>
                 <div class="tweet-info">
                   <span class="tweet-title">
@@ -47,4 +53,3 @@
       </div>
     </div>
 
-<%= render "shared/footer"%>
