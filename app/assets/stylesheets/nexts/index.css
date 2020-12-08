@@ -3,41 +3,25 @@
 }
 .main{
   background-color: #f8f8f8;
-  width: 100vw;
-  min-height: 80vh;
+  width: 100%;
+  margin-top: 80px;
   
 }
-.low{
-  display: flex;
-}
-.left-bar{
-  width: 25vw;
+.search-back{
+  background:  #f8f8f8;
+  width: 100vw;
+  height: 7vh;
   position: fixed;
-  margin-top: 100px;
-}
-.test-image{
-  width: 220px;
-  height: 220px;
-  border: solid;
-}
-.main-bar{
-  width: 50vw;
-  scroll-behavior: smooth;
-  margin: 100px auto;
-}
-.search-blind{
-  background-color: aqua;
 }
 .search-form {
   width: 50vw;
   height: 5vh;
   display: flex;
   margin-top: 10px;
-  margin-left: 150px;
-  position: fixed;
+  margin: 1vh auto;
 }
 .search-box {
-  width: 80%;
+  width: 90%;
   height: 5vh;
   padding-left: 10px;
 }
@@ -45,14 +29,40 @@
   width: 5vh;
   border: 0;
   cursor: pointer;
-  background-color: #272727;
+  background-color: rgb(81, 120, 250);
   padding: 8px;
 }
 .search-icon {
   width: 100%;
 }
+.low{
+  display: flex;
+}
+.left-bar{
+  width: 25vw;
+  position: fixed;
+  left: 0;
+}
+.test-image{
+  width: 80%;
+  padding-top: 80%;
+  margin-left: 10%;
+}
+.job-list{
+  margin-top: 150px;
+}
+.ocu-list{
+  margin-top: 10px;
+  text-align: center;
+}
+.main-bar{
+  width: 70vw;
+  margin-top: 60px;
+  margin-left: 25vw;
+}
+
 .lists{
-  margin: 100px auto auto 160px;
+  
 }
 .tweet-box{
   border: black solid 1px;
@@ -63,8 +73,4 @@
 }
 .right-bar{
   width: 15vw;
-}
-.ocu-list{
-  margin-top: 10px;
-  text-align: center;
 }

@@ -1,0 +1,62 @@
+*{
+  box-sizing: border-box;
+  
+}
+.main-tweet{
+  
+}
+.tweet-show{
+  margin: 0 auto;
+}
+.tweet-content-top{
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.tweet-content-left{
+
+}
+.tweet-title-show{
+  font-size: 30px;
+}
+.edit-icon{
+  margin-left: 400px;
+}
+.edit-icon-img{
+  width: 30px;
+  height: 30px;
+  
+}
+.edit-lists{
+  border: gray solid 1px;
+}
+.hidden{
+  display: none;
+}
+.edit-list{
+  color: black;
+  background-color: honeydew;
+  padding: 4px;
+}
+.created-time{
+  font-size: 15px;
+  color: gray;
+}
+.occupation-tag{
+  background-color: lightgray;
+  border-radius:10px;
+  text-align: center;
+}
+
+
+.scaut-btn{
+  margin: 10px auto;
+}
+.scaut{
+  border-radius: 10px;
+  color: white;
+  background-color: gray;
+  padding: 10px;
+
+}
+
