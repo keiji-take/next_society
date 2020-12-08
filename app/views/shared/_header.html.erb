@@ -8,7 +8,7 @@
           <li><%= link_to 'New Post', new_next_path, class:"new-tweet"%></li>
           <li><%= link_to 'sign out', destroy_user_session_path, method: :delete, class:"login-btn"%></li>
         <% else %>
-          <li><%= link_to 'New Post', new_user_registration_pathh, class:"new-tweet"%></li>
+          <li><%= link_to 'New Post', new_user_registration_path, class:"new-tweet"%></li>
           <li><%= link_to 'sign up', new_user_registration_path , class:"login-btn"%></li>
         <% end %>
       </ul>

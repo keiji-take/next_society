@@ -1,7 +1,6 @@
 
 <%= render "shared/header" %>
-
-<h1 class="sign-up">Sign up</h1>
+  <h1 class="sign-up">Sign up</h1>
 
 <%= form_with model: @user, url:user_registration_path, method: :post, class:"registration-main", local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>

@@ -6,11 +6,11 @@
   flex-direction: column;
 }
 .nav-top{
-  background-color: #272727;
+  
+  background-color: rgb(81, 120, 250);
   height: 80px;
   width: 100%;
-  position: fixed;
-  margin-top: 0;
+  
 }
 .nav {
   display: flex;
