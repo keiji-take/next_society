@@ -20,15 +20,14 @@
   font-size: 30px;
 }
 .edit-icon{
-  margin-left: 400px;
+  margin: auto 20px auto auto;
 }
 .edit-icon-img{
   width: 30px;
   height: 30px;
-  
 }
 .edit-lists{
-  border: gray solid 1px;
+  
 }
 .hidden{
   display: none;
@@ -37,6 +36,7 @@
   color: black;
   background-color: honeydew;
   padding: 4px;
+  border: gray solid 1px;
 }
 .created-time{
   font-size: 15px;
