@@ -4,11 +4,12 @@
 .main{
   background-color: #f8f8f8;
   width: 100vw;
-  min-height: 80vh;
-  
+  position: fixed;
+  margin-top: 100px;
 }
 .low{
   display: flex;
+  position: relative;
 }
 .left-bar{
   width: 25vw;
@@ -21,9 +22,8 @@
   border: solid;
 }
 .main-bar{
-  width: 50vw;
-  scroll-behavior: smooth;
-  margin: 100px auto;
+  width: 70vw;
+  margin-left: 25vw;
 }
 .search-blind{
   background-color: aqua;
@@ -33,7 +33,7 @@
   height: 5vh;
   display: flex;
   margin-top: 10px;
-  margin-left: 150px;
+  margin-left: 200px;
   position: fixed;
 }
 .search-box {

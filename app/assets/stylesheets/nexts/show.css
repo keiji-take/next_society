@@ -1,0 +1,25 @@
+*{
+  box-sizing: border-box;
+}
+.main-tweet{
+  background-color: blue;
+  position: fixed;
+  margin-top: 80px;
+}
+.tweet-show{
+  margin: 0 auto;
+}
+.tweet-content-top{
+  
+}
+.tweet-content-left{
+
+}
+.tweet-title{
+  
+}
+.scaut{
+  border: black solid 2px;
+  background-color: blueviolet;
+}
+

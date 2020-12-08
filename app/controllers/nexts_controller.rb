@@ -1,5 +1,5 @@
 class NextsController < ApplicationController
-
+  before_action :set_action, only: [:show, :edit, :update, :delete]
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
   end
@@ -14,9 +14,21 @@ class NextsController < ApplicationController
       render :new
     end
   end
+  def show
+  end
+  def edit
+  end
+  def update
+  end
+  def destroy
+    
+  end
 
   private
   def tweets_params
     params.require(:tweet).permit(:title, :occupation_id, :boast).merge(user_id: current_user.id)
+  end
+  def set_action
+    @tweet = Tweet.find(params[:id])
   end
 end

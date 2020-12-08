@@ -1,0 +1,19 @@
+<div class="tweet-show">
+  <div class="tweet-content-top">
+    <div class="tweet-content-left">
+      <h2 class="tweet-title">
+      <%= @tweet.title %>
+      </h2>
+      <div class="tweet-content-bottom">
+        <%= l @tweet.created_at %>
+        <%= @tweet.occupation.name %>
+      </div>
+    </div>
+    <div class="tweet-content-right">
+      <%= @tweet.occupation_id%>
+    <div>
+  </div>
+  <div class="tweeting">
+    <%= @tweet.boast %>
+  </div>
+</div>

@@ -2,15 +2,15 @@
   box-sizing: border-box;
 }
 .top-page-header {
-  padding: 2vh 15vw;
   display: flex;
   flex-direction: column;
 }
 .nav-top{
-  position: fixed;
   background-color: #272727;
   height: 80px;
   width: 100%;
+  position: fixed;
+  margin-top: 0;
 }
 .nav {
   display: flex;
@@ -41,6 +41,6 @@
 }
 .app-logo{
   font-size: 35px;
-  margin: 13px 50vw 0 30px;
+  margin: 13px auto 0 30px;
   color: white;
 }
