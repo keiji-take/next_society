@@ -1,5 +1,5 @@
 class NextsController < ApplicationController
-  before_action :set_action, only: [:show, :edit, :update, :delete]
+  before_action :set_action, only: [:show, :edit, :update, :destroy]
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
   end
@@ -21,7 +21,9 @@ class NextsController < ApplicationController
   def update
   end
   def destroy
-    
+    binding.pry
+    @tweet.delete
+    redirect_to root_path
   end
 
   private
