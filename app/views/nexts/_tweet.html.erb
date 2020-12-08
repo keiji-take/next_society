@@ -1,19 +1,29 @@
-<div class="tweet-show">
-  <div class="tweet-content-top">
-    <div class="tweet-content-left">
-      <h2 class="tweet-title">
-      <%= @tweet.title %>
-      </h2>
+
+  <div class="tweet-show">
+    <div class="tweet-content">
+      <div class="tweet-content-top">
+        <div class="top-title">
+          <h1 class="tweet-title-show"><%= @tweet.title %></h1>
+        </div>
+        <%# 投稿者閲覧の場合、表示 %>
+        <div class="edit-icon">
+          <%= image_tag 'edit-icon.png', class:"edit-icon-img", id:"edit-icon-img" %>
+          <ul class="edit-lists hidden" id="pull-down">
+            <li>
+              <%= link_to '編集する', '#', class:"edit-list" %>
+            </li>
+            <li>
+              <%= link_to '削除する', '#', class:"edit-list" %>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="tweet-content-bottom">
-        <%= l @tweet.created_at %>
-        <%= @tweet.occupation.name %>
+        <p class="created-time"><%= l @tweet.created_at %></p>
+        <p class="occupation-tag"> <%= @tweet.occupation.name %></p>
       </div>
     </div>
-    <div class="tweet-content-right">
-      <%= @tweet.occupation_id%>
-    <div>
+    <div class="tweeting">
+        <%= @tweet.boast %>
+    </div>
   </div>
-  <div class="tweeting">
-    <%= @tweet.boast %>
-  </div>
-</div>

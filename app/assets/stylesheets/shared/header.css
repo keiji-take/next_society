@@ -4,13 +4,14 @@
 .top-page-header {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .nav-top{
-  
   background-color: rgb(81, 120, 250);
   height: 80px;
   width: 100%;
-  
+  position: fixed;
+  top: 0;
 }
 .nav {
   display: flex;

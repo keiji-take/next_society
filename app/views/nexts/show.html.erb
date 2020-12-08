@@ -1,10 +1,12 @@
 <%= render "shared/header"%>
-  <div class="main-tweet">
+  <div class="main">
     <%= render "tweet"%>
-  </div>
-  <%# 企業ユーザーのとき %>
-  <div class="scaut-btn">
-    <%= link_to "スカウトする", '#', class:"scaut" %>
-  </div>
   
+  <%# 企業ユーザーのとき %>
+  
+  <%# チャット画面に遷移 %>
+    <div class="scaut-btn">
+      <%= link_to "スカウトする", '#', class:"scaut" %>
+    </div>
+  </div>
 <%= render "shared/footer"%>

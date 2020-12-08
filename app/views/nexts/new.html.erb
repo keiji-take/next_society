@@ -1,24 +1,24 @@
 <%= render "shared/header" %>
-
-<%= form_with model: @tweet, url: nexts_path, method: :post, class:"tweet-main", local: true do |f| %>
-  
-  <div class="tweet-li">
-    <div class="tweet">
-      <%= f.label :title, class:"input-label" %>
-      <%= f.text_area :title, autofocus: true, class:"tweet-title", id:"title", placeholder:"例)プログラミングでフリマアプリを作りました" %>
+<div class="main">
+  <%= form_with model: @tweet, url: nexts_path, method: :post, class:"tweet-main", local: true do |f| %>
+    
+    <div class="tweet-li">
+      <div class="tweet">
+        <%= f.label :title, class:"input-label" %>
+        <%= f.text_area :title, autofocus: true, class:"tweet-title", id:"title", placeholder:"例)プログラミングでフリマアプリを作りました" %>
+      </div>
+      <div class="tweet">
+        <%= f.label :occupation, class:"input-label" %>
+        <%= f.collection_select(:occupation_id, Occupation.all, :id, :name,{prompt:"---"}, {class:"tweet-occupation", id:"occupation"}) %>
+      </div>
+      <div class="tweet">
+        <%= f.label :boast, class:"input-label" %>
+        <%= f.text_area :boast, class:"tweet-boast", id:"boast", placeholder:"あああああああああああああああああああああああああ" %>
+      </div>
+      <div class="tweet-btn">
+        <%= f.submit "投稿する", class:"submit-btn" %>
+      </div>
     </div>
-    <div class="tweet">
-      <%= f.label :occupation, class:"input-label" %>
-      <%= f.collection_select(:occupation_id, Occupation.all, :id, :name,{prompt:"---"}, {class:"tweet-occupation", id:"occupation"}) %>
-    </div>
-    <div class="tweet">
-      <%= f.label :boast, class:"input-label" %>
-      <%= f.text_area :boast, class:"tweet-boast", id:"boast", placeholder:"あああああああああああああああああああああああああ" %>
-    </div>
-    <div class="tweet-btn">
-      <%= f.submit "投稿する", class:"submit-btn" %>
-    </div>
-  </div>
-<% end %>
-
+  <% end %>
+</div>
 <%= render "shared/footer" %>
