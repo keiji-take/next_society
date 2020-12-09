@@ -19,9 +19,13 @@ class NextsController < ApplicationController
   def edit
   end
   def update
+    if @tweet.update(tweets_params)
+      redirect_to next_path(@tweet.id)
+    else
+      render :edit
+    end
   end
   def destroy
-    binding.pry
     @tweet.delete
     redirect_to root_path
   end

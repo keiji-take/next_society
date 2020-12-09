@@ -27,27 +27,36 @@
       </div>
       <div class="main-bar">
         
-        <ul class="lists">
+        <ul class="tweet-lists">
           <% @tweets.each do |tweet| %>
             <li class="tweet-box">
-              <%= link_to next_path(tweet.id) do %>
+              
               <div class="tweet-list">
-                <div class="user-img">
-                  <%= tweet.user.name %>
+                <div class="tweet-left">
+                  <div class="user-img">
+                    <%= link_to image_tag("noname-icon.png", class:"user-icon-img"), "#" %>
+                  </div>
+                  <div class="left-bottom">
+                    <%= tweet.user.name %>
+                  </div>
                 </div>
-                <div class="tweet-info">
-                  <span class="tweet-title">
-                    <%= tweet.title %>
-                  </span>
-                  <div class="tweet-occupation">
-                    <%= tweet.occupation.name %>
+                <div class="tweet-right"> 
+                <%= link_to next_path(tweet.id) do %>
+                  <div class="tweet-info">
+                    <span class="tweet-title">
+                      <%= tweet.title %>
+                    </span>
+                    <div class="tweet-occupation">
+                      <%= tweet.occupation.name %>
+                    </div>
+                    <div class="tweet-boast">
+                      <%= tweet.boast %>
+                    </div>
                   </div>
-                  <div class="tweet-boast">
-                    <%= tweet.boast %>
-                  </div>
+                <% end %>
                 </div>
               </div>
-              <% end %>
+              
             </li>
           <% end %>
         </ul>

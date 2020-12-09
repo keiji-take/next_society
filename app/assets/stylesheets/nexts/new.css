@@ -13,14 +13,14 @@
 .input-label{
   margin-right: 20px;
 }
-.tweet-occupation{
+.tweet-occupation-box{
   width: 8vw;
 }
-.tweet-boast{
+.tweet-boast-box{
   width: 30vw;
   height: 13vh;
 }
-.tweet-title{
+.tweet-title-box{
   width: 30vw;
   height: 28px;
 }

@@ -65,12 +65,42 @@
   
 }
 .tweet-box{
-  border: black solid 1px;
+  border: lightgray solid 1px;
+  margin-top: 11px;
+  background-color: white;
+  width: 800px;
 }
 .tweet-list{
   display: flex;
-
 }
+.tweet-left{
+  background-color: lightgreen;
+}
+.user-icon-img{
+  width: 70px;
+  height: 70px;
+}
+.left-bottom{
+  display: flex;
+  align-items: center;
+}
+.tweet-right{
+  width: 100%;
+  background-color: lightpink;
+}
+.tweet-info{
+  
+}
+.tweet-title{
+  font-size: 22px;
+  margin: 5px 8px;
+}
+.tweet-occupation{
+  margin-left: 20px;
+}
+
+
+
 .right-bar{
   width: 15vw;
 }

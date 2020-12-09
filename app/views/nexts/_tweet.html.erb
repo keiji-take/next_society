@@ -10,7 +10,7 @@
           <%= image_tag 'edit-icon.png', class:"edit-icon-img", id:"edit-icon-img" %>
           <ul class="edit-lists hidden" id="pull-down">
             <li>
-              <%= link_to '編集する', '#', class:"edit-list" %>
+              <%= link_to '編集する', edit_next_path, class:"edit-list" %>
             </li>
             <li>
               <%= link_to '削除する', next_path, method: :delete, class:"edit-list" %>

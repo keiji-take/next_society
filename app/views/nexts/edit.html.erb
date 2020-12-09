@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
+
 <div class="main">
-  <%= form_with model: @tweet, url: nexts_path, method: :post, class:"tweet-main", local: true do |f| %>
+  <%= form_with model: @tweet, url: next_path, method: :put, class:"tweet-main", local: true do |f| %>
     
     <div class="tweet-li">
       <div class="tweet">
@@ -20,5 +21,8 @@
       </div>
     </div>
   <% end %>
+
 </div>
+
+
 <%= render "shared/footer" %>
