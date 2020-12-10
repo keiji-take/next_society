@@ -1,0 +1,68 @@
+
+.user-infomation{
+  width: 100%;
+  display: flex;
+}
+.user-infomation-main{
+  height: 100%;
+  width: 67%;
+  margin-top: 15px;
+}
+.user-main-top{
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+.user-top-img{
+  height: 100%;
+  margin-left: 111px;
+}
+.user-icon{
+  height: 100px;
+  width: 100px;
+}
+.user-top-name{
+  height: 100%;
+  width: 100%;
+  margin-left: 22px;
+}
+.user-name{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.user-main-bottom{
+  height: 50%;
+  width: 100%;
+}
+.user-sub-profile{
+  margin-left: 120px;
+  width: 100%;
+  height: 100px;
+}
+.user-infomation-sub{
+  height: 100%;
+  width: 33%;
+  margin-top: 15px;
+}
+.user-sub-topic{
+
+}
+.user-topic{
+  border-bottom: gray solid 2px;
+}
+.topic-title{
+  font-size: 20px;
+}
+
+.user-contents{
+  
+  
+}
+.user-content-title{
+  
+}
+.content-title{
+  font-size: 50px;
+  border-bottom: gray solid 2px;
+}

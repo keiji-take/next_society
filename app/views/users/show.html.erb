@@ -2,14 +2,71 @@
 <div class="main">
   <div class="user-infomation">
     <div class="user-infomation-main">
-      <div class="">
+      <div class="user-main-top">
+        <div class="user-top-img">
+          <%= link_to image_tag("noname-icon.png", class:"user-icon"), "#" %>
+        </div>
+        <div class="user-top-name">
+          <div class="user-name">
+            <%= @user.name %>
+          </div>
+          <div class="user-occupation">
+            <%= @user.birth_date%>
+          </div>
+        </div>
+      </div>
+      <div class="user-main-bottom">
+        <div class="user-sub-profile">
+          <%= @user.profile %>
+        </div>
       </div>
     </div>
     <div class="user-infomation-sub">
+      <div class="user-sub-topic">
+        <div class="user-topic">
+          <span class="topic-title">ユーザー情報</span>
+        </div>
+        <ul>
+          <li>性別</li>
+          <li>なりたい職業</li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="user-contents">
-  </div>
-
+    
+      <span　class="content-title">投稿一覧</span>
+      <ul class="tweet-lists">
+        <% @tweets.each do |tweet| %>
+          <li class="tweet-box">
+            <div class="tweet-list">
+              <div class="tweet-left">
+                <div class="user-img">
+                  <%= link_to image_tag("noname-icon.png", class:"tweet-user-icon"), "#" %>
+                </div>
+                <div class="left-bottom">
+                  <%= tweet.user.name %>
+                </div>
+              </div>
+              <div class="tweet-right"> 
+              <%= link_to next_path(tweet.id) do %>
+                <div class="tweet-info">
+                  <span class="tweet-title">
+                    <%= tweet.title %>
+                  </span>
+                  <div class="tweet-occupation">
+                    <%= tweet.occupation.name %>
+                  </div>
+                  <div class="tweet-boast">
+                    <%= tweet.boast %>
+                  </div>
+                </div>
+              <% end %>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  
 </div>
-<%= render "shared/footer" %>
