@@ -6,17 +6,19 @@
           <h1 class="tweet-title-show"><%= @tweet.title %></h1>
         </div>
         <%# 投稿者閲覧の場合、表示 %>
-        <div class="edit-icon">
-          <%= image_tag 'edit-icon.png', class:"edit-icon-img", id:"edit-icon-img" %>
-          <ul class="edit-lists hidden" id="pull-down">
-            <li>
-              <%= link_to '編集する', '#', class:"edit-list" %>
-            </li>
-            <li>
-              <%= link_to '削除する', next_path, method: :delete, class:"edit-list" %>
-            </li>
-          </ul>
-        </div>
+        <% if current_user.id == @tweet.user.id %>
+          <div class="edit-icon">
+            <%= image_tag 'edit-icon.png', class:"edit-icon-img", id:"edit-icon-img" %>
+            <ul class="edit-lists hidden" id="pull-down">
+              <li>
+                <%= link_to '編集する', edit_next_path, class:"edit-list" %>
+              </li>
+              <li>
+                <%= link_to '削除する', next_path, method: :delete, class:"edit-list" %>
+              </li>
+            </ul>
+          </div>
+        <% end %>
       </div>
       <div class="tweet-content-bottom">
         <p class="created-time"><%= l @tweet.created_at %></p>

@@ -3,7 +3,7 @@
 }
 .main{
   background-color: #f8f8f8;
-  width: 100%;
+  width: 100vw;
   margin-top: 80px;
   
 }
@@ -65,12 +65,50 @@
   
 }
 .tweet-box{
-  border: black solid 1px;
+  border: lightgray solid 1px;
+  margin-top: 11px;
+  background-color: white;
+  width: 800px;
 }
 .tweet-list{
   display: flex;
-
 }
+.tweet-left{
+  margin-left: 5px;
+}
+.tweet-user-icon{
+  width: 70px;
+  height: 70px;
+}
+.left-bottom{
+  display: flex;
+  align-items: center;
+}
+.tweet-right{
+  width: 100%;
+  
+}
+.tweet-info{
+  margin: 5px 5px 5px 5px;
+}
+.tweet-title{
+  font-size: 22px;
+  margin: 5px 8px;
+  color: black;
+}
+.tweet-occupation{
+  margin-left: 20px;
+  color: black;
+}
+.tweet-boast{
+  margin-left: 10px;
+  color: black;
+}
+
+
 .right-bar{
   width: 15vw;
+  position: fixed;
+  right: 0;
+  
 }
