@@ -5,7 +5,7 @@
   background-color: #f8f8f8;
   width: 100vw;
   margin-top: 80px;
-  
+  height: calc(100vh - 80px - 100px );
 }
 .search-back{
   background:  #f8f8f8;

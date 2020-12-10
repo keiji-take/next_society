@@ -1,13 +1,10 @@
 .tweet-main{
-  margin: 0 auto;
+
 }
-.tweet{
-  display: flex;
+.tweeting{
+  margin-left: 30vw;
 }
-.tweet{
-  margin: 30px auto;
-}
-.tweet-list{
+.tweet-list-box{
   margin: 0 auto;
 }
 .input-label{

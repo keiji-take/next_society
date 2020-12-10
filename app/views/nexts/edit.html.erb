@@ -3,7 +3,7 @@
 <div class="main">
   <%= form_with model: @tweet, url: next_path, method: :put, class:"tweet-main", local: true do |f| %>
     
-    <div class="tweet-li">
+    <div class="tweet-list-box">
       <div class="tweet">
         <%= f.label :title, class:"input-label" %>
         <%= f.text_area :title, autofocus: true, class:"tweet-title-box", id:"title", placeholder:"例)プログラミングでフリマアプリを作りました" %>

@@ -2,16 +2,16 @@
 <div class="main">
   <%= form_with model: @tweet, url: nexts_path, method: :post, class:"tweet-main", local: true do |f| %>
     
-    <div class="tweet-li">
-      <div class="tweet">
+    <div class="tweet-list-box">
+      <div class="tweeting">
         <%= f.label :title, class:"input-label" %>
         <%= f.text_area :title, autofocus: true, class:"tweet-title-box", id:"title", placeholder:"例)プログラミングでフリマアプリを作りました" %>
       </div>
-      <div class="tweet">
+      <div class="tweeting">
         <%= f.label :occupation, class:"input-label" %>
         <%= f.collection_select(:occupation_id, Occupation.all, :id, :name,{prompt:"---"}, {class:"tweet-occupation-box", id:"occupation"}) %>
       </div>
-      <div class="tweet">
+      <div class="tweeting">
         <%= f.label :boast, class:"input-label" %>
         <%= f.text_area :boast, class:"tweet-boast-box", id:"boast", placeholder:"あああああああああああああああああああああああああ" %>
       </div>
