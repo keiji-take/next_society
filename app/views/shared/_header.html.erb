@@ -6,7 +6,7 @@
         <%# devise導入後に表示分岐 %>
         <% if user_signed_in? %>
           <li><%= link_to 'New Post', new_next_path, class:"new-tweet"%></li>
-          <li><%= link_to 'sign out', destroy_user_session_path, method: :delete, class:"login-btn"%></li>
+          <li><%= link_to current_user.name, user_path(current_user.id), method: :get, class:"login-btn"%></li>
         <% else %>
           <li><%= link_to 'New Post', new_user_registration_path, class:"new-tweet"%></li>
           <li><%= link_to 'sign up', new_user_registration_path , class:"login-btn"%></li>
@@ -14,7 +14,14 @@
       </ul>
 
         <%# 登録してあればユーザーの写真を挿入する %>
-      <%= link_to image_tag("noname-icon.png", class:"user-icon"), "#" %>
+      <div class="user-icon-img">
+        <%= link_to image_tag("noname-icon.png", class:"user-icon", id:"user-icon"), "#" %>
+        <div class="edit-user-lists hidden" id="pull-down">
+          <li> <%= link_to 'ユーザー情報', "#", class:"edit-list" %> </li>
+          <li> <%= link_to 'Scaut- Chatを見る', "#", class:"edit-list" %> </li>
+          <li> <%= link_to 'サインアウトする', destroy_user_session_path, method: :delete, class:"edit-list" %> </li>
+        </div>
+      </div>
     </div>
   </div>
 
