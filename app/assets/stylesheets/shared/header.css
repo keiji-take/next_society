@@ -22,7 +22,9 @@
   margin-top: 25px;
 }
 .edit-user-lists{
-  position: absolute;
+  position: fixed;
+  right: 20px;
+  top: 80px;
 }
 .user-header-icon{
   width: 70px;

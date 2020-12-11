@@ -20,14 +20,18 @@
   font-size: 30px;
 }
 .edit-icon{
-  margin: auto 40px auto auto;
+  position: fixed;
+  right: 40px;
+  top: 120px;
 }
 .edit-icon-img{
   width: 30px;
   height: 30px;
 }
 .edit-lists{
-  
+  position: fixed;
+  right: 40px;
+  top: 150px;
 }
 .hidden{
   display: none;
