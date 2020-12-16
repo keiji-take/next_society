@@ -33,7 +33,7 @@
 
       <div class="field">
         <%= f.label :gender %>
-        <%= f.collection_select(:gender, Gender.all, :id, :name, {prompt: "---"}, {class:"input-default", id:"gender"}) %>
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {prompt: "---"}, {class:"input-default", id:"gender"}) %>
       </div>
 
       <div class="field">
@@ -59,12 +59,12 @@
 
       <div class="field">
         <%= f.label :occupation %>
-        <%= f.collection_select(:occupation, Occupation.all, :id, :name, {prompt: "---"}, {class:"input-default", id:"occupation"}) %>
+        <%= f.collection_select(:occupation_id, Occupation.all, :id, :name, {prompt: "---"}, {class:"input-default", id:"occupation"}) %>
       </div>
 
       <div class="field">
         <%= f.label :location %>
-        <%= f.collection_select(:location, Location.all, :id, :name, {prompt: "---"}, {class:"input-default", id:"location"}) %>
+        <%= f.collection_select(:location_id, Location.all, :id, :name, {prompt: "---"}, {class:"input-default", id:"location"}) %>
       </div>
       
       <div class="register-btn">
