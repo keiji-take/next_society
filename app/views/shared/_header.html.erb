@@ -17,11 +17,13 @@
       <div class="user-icon-img">
         <%= link_to image_tag("noname-icon.png", class:"user-header-icon", id:"user-header-icon"), "#" %>
       </div>
-      <div class="edit-user-lists hidden" id="pull-down-icon">
-        <li> <%= link_to 'ユーザー情報を編集する', "#", class:"edit-list" %> </li>
-        <li> <%= link_to 'Scaut- Chatを見る', "#", class:"edit-list" %> </li>
-        <li> <%= link_to 'サインアウトする', destroy_user_session_path, method: :delete, class:"edit-list" %> </li>
-      </div>
+      <% if user_signed_in? %>
+        <div class="edit-user-lists hidden" id="pull-down-icon">
+          <li> <%= link_to 'ユーザー情報を編集する', "#", class:"edit-list" %> </li>
+          <li> <%= link_to 'Scaut- Chatを見る', "#", class:"edit-list" %> </li>
+          <li> <%= link_to 'サインアウトする', destroy_user_session_path, method: :delete, class:"edit-list" %> </li>
+        </div>
+      <% end %>
     </div>
   </div>
 
