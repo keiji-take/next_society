@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: "nexts#index"
 
   resources :nexts
-  resources :users, only: [:show, :edit]
+  resources :users, only: [:show, :edit, :update]
   
 end
