@@ -66,6 +66,11 @@
         <%= f.label :location %>
         <%= f.collection_select(:location_id, Location.all, :id, :name, {prompt: "---"}, {class:"input-default", id:"location"}) %>
       </div>
+
+      <label class="image-label">
+        <span>self image</span>
+        <%= f.file_field :image, class:"image-file" %>
+      </label>
       
       <div class="register-btn">
         <%= f.submit "Sign up", class:"submit-btn" %>
