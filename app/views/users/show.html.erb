@@ -3,8 +3,11 @@
   <div class="user-infomation">
     <div class="user-infomation-main">
       <div class="user-main-top">
-        <div class="user-top-img">
-          <%= link_to image_tag("noname-icon.png", class:"user-icon"), "#" %>
+        <div class="user-top-img" id="user-top-img">
+          <% if @user.image != nil %>
+            <%= link_to image_tag("noname-icon.png", class:"user-icon"), "#" %>
+          <% end %>
+          <%#= image_tag @user.image, class:"user-icon" %>
         </div>
         <div class="user-top-name">
           <div class="user-name">
@@ -38,7 +41,7 @@
   </div>
   <div class="user-contents">
     
-      <span　class="content-title">投稿一覧</span>
+      <span class="content-title">投稿一覧</span>
       <ul class="tweet-lists">
         <% @tweets.each do |tweet| %>
           <li class="tweet-box">
