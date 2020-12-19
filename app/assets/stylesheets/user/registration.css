@@ -75,10 +75,28 @@
   line-height: 60px;
   padding: 0 5px;
 }
+.icon-preview{
+  display: flex;
+}
+
+.icon-image-preview{
+  width: 100px;
+  height: 100px;
+}
+.image-select{
+  margin: auto;
+}
+.image-select-btn{
+  width: 40%;
+  border: 1px gray solid;
+  padding: 8px;
+}
+.image-file {
+
+}
 
 .register-btn {
   margin: 30px auto;
-  color: #ccc;
   width: 50%;
 }
 
