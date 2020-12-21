@@ -4,12 +4,10 @@
     <div class="user-infomation-main">
       <div class="user-main-top">
         <div class="user-top-img" id="user-top-img">
-          <% if @user.image == nil %>
+          <% if @user.image != nil %>
             <%= image_tag("noname-icon.png", class:"user-icon") %>
           <% else %>
-            <div class="user-icon">
-              <%= image_tag @user.image.variant(resize:'150x150') if @user.image.attached? %>
-            </div>
+            <%= image_tag @user.image, class:"user-icon" if @user.image.attached? %>
           <% end %>
         </div>
         <div class="user-top-name">
@@ -20,7 +18,7 @@
             <%= @user.birth_date %>
           </div>
           <% if current_user.id == @user.id %>
-            <span><%= link_to 'サインアウト', destroy_user_session_path, method: :delete %></span>
+            <span><%= link_to '編集する', edit_user_path(current_user.id) %></span>
           <% end %>
         </div>
       </div>

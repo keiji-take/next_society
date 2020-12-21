@@ -3,7 +3,7 @@
 <div class="main">
   <h1 class="sign-up">Sign up</h1>
 
-  <%= form_with model: @user, url:user_registration_path, method: :post, class:"registration-main", local: true do |f| %>
+  <%= form_with model: @user, url:user_registration_path, method: :post, class:"main-registration", local: true do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="form-wrap">
       <div class="field">
@@ -84,6 +84,8 @@
       </div>
     </div>
   <% end %>
+  <%= render "devise/shared/links" %>
 </div>
-<%= render "devise/shared/links" %>
+
+
 
