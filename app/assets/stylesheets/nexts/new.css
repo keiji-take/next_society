@@ -1,11 +1,11 @@
 .tweet-main{
+}
 
+.tweet-list-box{
 }
 .tweeting{
   margin-left: 30vw;
-}
-.tweet-list-box{
-  margin: 0 auto;
+  margin-top: 20px;
 }
 .input-label{
   margin-right: 20px;

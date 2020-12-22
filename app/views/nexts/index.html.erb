@@ -34,7 +34,11 @@
               <div class="tweet-list">
                 <div class="tweet-left">
                   <div class="user-img">
-                    <%= link_to image_tag("noname-icon.png", class:"tweet-user-icon"), user_path(tweet.user.id) %>
+                    <% if tweet.user.image != nil %>
+                      <%= link_to image_tag("noname-icon.png", class:"tweet-user-icon"), user_path(tweet.user.id) %>
+                    <% else %>
+                      <%= link_to tweet.user.image, user_path(tweet.user.id), class:"tweet-user-icon" if tweet.user.image.attached?%>
+                    <% end %>
                   </div>
                   <div class="left-bottom">
                     <%= tweet.user.name %>
