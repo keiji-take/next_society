@@ -16,6 +16,7 @@
 .user-top-img{
   height: 100%;
   margin-left: 111px;
+  object-fit: cover;
 }
 .user-icon{
   height: 100px;
