@@ -29,7 +29,9 @@ class NextsController < ApplicationController
     @tweet.delete
     redirect_to root_path
   end
-
+  def user_selector
+    
+  end
   private
   def tweets_params
     params.require(:tweet).permit(:title, :occupation_id, :boast).merge(user_id: current_user.id)
