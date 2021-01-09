@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/index'
   get 'rooms/index'
   get 'rooms/create'
   devise_for :companies, controllers:{
