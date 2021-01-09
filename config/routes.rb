@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rooms/index'
+  get 'rooms/create'
   devise_for :companies, controllers:{
     registrations: 'companies/registrations',
     sessions: 'companies/sessions',
@@ -18,5 +20,6 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show, :edit, :update]
-  resources :companies
+  resources :companies, :show
+  resources :rooms, only: [:index, :show]
 end
