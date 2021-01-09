@@ -7,9 +7,11 @@
         <% if user_signed_in? %>
           <li><%= link_to '投稿する', new_next_path, class:"new-tweet"%></li>
           <li><%= link_to current_user.name, user_path(current_user.id), method: :get, class:"login-btn"%></li>
+        <% elsif company_signed_in? %>
+          <li><%= link_to current_company.name, destroy_company_session_path, class:"login-btn"%></li>
         <% else %>
           <li><%= link_to '投稿する', new_user_registration_path, class:"new-tweet"%></li>
-          <li><%= link_to 'サインイン', new_user_registration_path , class:"login-btn"%></li>
+          <li><%= link_to 'サインイン', user_selector_nexts_path , class:"login-btn"%></li>
         <% end %>
       </ul>
 
@@ -22,6 +24,11 @@
           <li> <%= link_to 'ユーザー情報を編集する', "#", class:"edit-list" %> </li>
           <li> <%= link_to 'Scaut- Chatを見る', "#", class:"edit-list" %> </li>
           <li> <%= link_to 'サインアウトする', destroy_user_session_path, method: :delete, class:"edit-list" %> </li>
+        </div>
+      <% elsif company_signed_in? %>
+        <div class="edit-user-lists hidden" id="pull-down-icon">
+          <li> <%= link_to 'Scaut- Chatを見る', "#", class:"edit-list" %> </li>
+          <li> <%= link_to 'サインアウトする', destroy_company_session_path, class:"edit-list" %> </li>
         </div>
       <% end %>
     </div>

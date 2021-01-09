@@ -40,12 +40,8 @@
 | company_name                    | string | null: false |
 | email                           | string | null: false |
 | encrypted_password              | string | null: false |
-| vision                          | string | null: false |
-| ideal                           |integer | null: false |
-| location                        |integer | null: false |
-| business_content                | text   | null: false |
-| job_description                 | text   | null: false |
-| welfare                         | text   | null: false |
+| name                            | string | null: false |
+| tel_number                      | string | null: false |
 
 ### Association
 - has_many :chats

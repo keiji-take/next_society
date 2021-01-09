@@ -1,0 +1,21 @@
+.selector-btn{
+  display: flex;
+  justify-content: center;
+  padding-top: 18%;
+}
+.select-user{
+  margin-left: 70px;
+  text-align: center;
+}
+.user-select-btn{
+  color: white;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  background-color: teal;
+  border: 1px gray solid;
+  width: 300px;
+  height: 100px;
+  text-decoration: none;
+}
