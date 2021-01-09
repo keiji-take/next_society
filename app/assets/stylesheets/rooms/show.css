@@ -1,0 +1,29 @@
+.main-back{
+  background-color: #f8f8f8;
+  height: calc(100vh - 80px);
+  width: 100vw;
+  margin-top: 80px;
+  display: flex;
+}
+.side-bar{
+  background-color: gray;
+  width: 280px;
+}
+.side-head{
+  background-color: navy;
+  color: #f8f8f8;
+  height: 80px;
+}
+
+
+
+.messages-viewer{
+  width: calc(100vw - 280px);
+  height: calc(100vh - 80px - 80px);
+}
+.message-box{
+  background-color: lightgray;
+  width: calc(100vw - 280px);
+  height: 80px;
+
+}

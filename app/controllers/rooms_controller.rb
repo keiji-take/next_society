@@ -2,6 +2,6 @@ class RoomsController < ApplicationController
   def index
   end
 
-  def create
+  def show
   end
 end
