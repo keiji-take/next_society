@@ -8,5 +8,6 @@ class Company < ActiveRecord::Base
     validates :company_name
     validates :tel_number
   end
-
+  has_many :user_companies
+  has_many :users, through: :user_companies
 end
