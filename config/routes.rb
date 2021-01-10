@@ -22,5 +22,6 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show, :edit, :update]
   resources :companies, :show
-  resources :rooms, only: [:index, :show]
+  resources :rooms, :index
+  resources :messages, only: [:index, :show]
 end

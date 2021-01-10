@@ -2,7 +2,7 @@
 
 <div class="main-back">
   <div class="side-bar">
-    <div class="side-head">
+    <div class="side-name">
       
     </div>
     <div class="">
@@ -16,7 +16,16 @@
       <%#= render partial: 'message', collection: @messages %>
     </div>
     <div class="message-box">
-      <%#= form_with model:[room] %>
+      <%= form_with model: [@room, @message], class: 'chat-box', local: true do |f| %>
+        <div class="comment-box">
+          <%= f.text_field :content, class: 'commit', placeholder: 'type a message' %>
+          <label class="comment-image">
+            <span class="image-file">image</span>
+            <%= f.file_field :image, class: 'hidden' %>
+          </label>
+        </div>
+        <%= f.submit 'SEND', class: 'send' %>
+      <% end %>
     </div>
   </div>
 </div>

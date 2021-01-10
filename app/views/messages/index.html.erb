@@ -1,2 +1,28 @@
-<h1>Messages#index</h1>
-<p>Find me in app/views/messages/index.html.erb</p>
+<%= render "shared/header" %>
+
+<div class="main-back">
+  <div class="side-bar">
+    <div class="side-name">
+      
+    </div>
+    <div class="">
+      <ul class="">
+        <li>テンプレートレンダーコレクション</li>
+      </ul>
+    </div>
+  </div>
+  <div class="main-contact">
+    <div class="messages-viewer">
+      <%= render partial: 'message', collection: @messages %>
+    </div>
+
+    <div class="message-box">
+      <%= form_with model: [@company, @message], class: 'chat-box', local: true do |f| %>
+        <div class="comment-box">
+          <%= f.text_field :content, class: 'commit', placeholder: 'type a message' %>
+        </div>
+        <%= f.submit 'SEND', class: 'send' %>
+      <% end %>
+    </div>
+  </div>
+</div>
