@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tweets
+  has_many :user_companies
+  has_many :company, through: :user_companies
   def was_attached?
     image.attached?
   end
