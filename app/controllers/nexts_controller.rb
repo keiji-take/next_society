@@ -2,6 +2,19 @@ class NextsController < ApplicationController
   before_action :set_action, only: [:show, :edit, :update, :destroy]
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
+    if user_signed_in?
+      rooms = current_user.rooms
+      @company_ids = []
+      rooms.each do |r|
+        @company.ids << r.company_id
+      end
+    elsif company_signed_in?
+      rooms = current_company.rooms
+      @user_ids = []
+      rooms.each do |r|
+        @user.ids << r.user_ids
+      end
+    end
   end
   def new
     @tweet = Tweet.new

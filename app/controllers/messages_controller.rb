@@ -16,6 +16,7 @@ class MessagesController < ApplicationController
     end
   end
   def show
+    binding.pry
     
   end
 end
