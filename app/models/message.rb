@@ -1,4 +1,5 @@
 class Message < ApplicationRecord
-  belongs_to :companies
-  belongs_to :users
+  belongs_to :company
+  belongs_to :user
+  belongs_to :room
 end

@@ -15,7 +15,9 @@
   height: 80px;
 }
 
-
+.main-content{
+  height: calc(100vh - 80px);
+}
 
 .messages-viewer{
   width: calc(100vw - 280px);

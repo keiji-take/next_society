@@ -1,23 +1,16 @@
 <%= render "shared/header" %>
 
 <div class="main-back">
-  <div class="side-bar">
-    <div class="side-name">
-      
-    </div>
-    <div class="">
-      <ul class="">
-        <li>テンプレートレンダーコレクション</li>
-      </ul>
-    </div>
-  </div>
+  <%= render "rooms/sidebar" %>
   <div class="main-contact">
     <div class="messages-viewer">
+      
       <%= render partial: 'message', collection: @messages %>
+
     </div>
 
     <div class="message-box">
-      <%= form_with model: [@company, @message], class: 'chat-box', local: true do |f| %>
+      <%= form_with model: [@room, @message], class: 'chat-box', local: true do |f| %>
         <div class="comment-box">
           <%= f.text_field :content, class: 'commit', placeholder: 'type a message' %>
         </div>
