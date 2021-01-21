@@ -1,17 +1,17 @@
 class RoomsController < ApplicationController
   def index
-    # if user_signed_in?
-    #   @room = Room.find(params[:user_id])
+    if user_signed_in?
+      @rooms = Room.includes(:company)
 
-    # elsif
-    #   @room = Room.find(params[:company_id])
-      
-    # end
+    elsif company_signed_in?
+      @rooms = Room.includes(:user)
+    end
   end
   def show
-    # @room = Room.find(params[:id])
-    # @message = Message.new
-    # @messages = @room.messages
+    @room = Room.find(params[:id])
+    @message = Message.new
+    @messages = @room.messages
+    binding.pry
     # if user_signed_in?
     #   if @room.user.id == current_user.id
     #     @company = @room.company
