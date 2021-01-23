@@ -3,17 +3,9 @@ class NextsController < ApplicationController
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
     if user_signed_in?
-      rooms = current_user.rooms
-      @company_ids = []
-      rooms.each do |r|
-        @company.ids << r.company_id
-      end
+      
     elsif company_signed_in?
-      rooms = current_company.rooms
-      @user_ids = []
-      rooms.each do |r|
-        @user.ids << r.user_ids
-      end
+      
     end
   end
   def new
@@ -45,6 +37,7 @@ class NextsController < ApplicationController
   def user_selector
     
   end
+
   private
   def tweets_params
     params.require(:tweet).permit(:title, :occupation_id, :boast).merge(user_id: current_user.id)
