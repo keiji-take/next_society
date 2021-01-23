@@ -1,32 +1,10 @@
 class RoomsController < ApplicationController
   def index
     if user_signed_in?
-      @rooms = Room.includes(:company)
-
+      @rooms = Room.includes(:company).where(company_id: current_user.id)
     elsif company_signed_in?
-      @rooms = Room.includes(:user)
+      @rooms = Room.includes(:user).where(company_id: current_company.id)
     end
-  end
-  def show
-    @room = Room.find(params[:id])
-    @message = Message.new
-    @messages = @room.messages
-    binding.pry
-    # if user_signed_in?
-    #   if @room.user.id == current_user.id
-    #     @company = @room.company
-    #   else
-    #     redirect_to "#"
-    #   end
-    # elsif company_signed_in?
-    #   if @room.company.id == currrent_company.id
-    #     @user = @room.user
-    #   else
-    #     redirect_to "#"
-    #   end
-    # else
-    #   redirect_to "/"
-    # end
   end
   def create
     if user_signed_in?
@@ -39,7 +17,7 @@ class RoomsController < ApplicationController
       redirect_to root_path
     end
     if @room.save 
-      redirect_to :action => "show", :id => @room.id
+      redirect_to :action => "index", :id => @room.id
     else
       redirect_to "/"
     end

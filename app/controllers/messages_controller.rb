@@ -1,9 +1,9 @@
 class MessagesController < ApplicationController
   def index
     if user_signed_in?
-      @rooms = Room.includes(:company)
+      @rooms = Room.includes(:company).where(company_id: current_user.id)
     elsif company_signed_in?
-      @rooms = Room.includes(:user)
+      @rooms = Room.includes(:user).where(company_id: current_company.id)
     end
     @message = Message.new
     @room = Room.find(params[:room_id])
