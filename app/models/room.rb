@@ -1,4 +1,5 @@
 class Room < ApplicationRecord
-  has_many :companies
-  has_many :users
+  belongs_to :user
+  belongs_to :company
+  has_many :messages
 end

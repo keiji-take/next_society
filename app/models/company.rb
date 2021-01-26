@@ -8,5 +8,5 @@ class Company < ActiveRecord::Base
     validates :company_name
     validates :tel_number
   end
-
+  has_many :roomms
 end

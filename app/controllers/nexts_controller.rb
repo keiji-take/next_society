@@ -2,6 +2,11 @@ class NextsController < ApplicationController
   before_action :set_action, only: [:show, :edit, :update, :destroy]
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
+    if user_signed_in?
+      
+    elsif company_signed_in?
+      
+    end
   end
   def new
     @tweet = Tweet.new
@@ -15,6 +20,9 @@ class NextsController < ApplicationController
     end
   end
   def show
+    if company_signed_in?
+      @rooms = Room.where(user_id: @tweet.user.id).where(company_id: current_company.id)
+    end
   end
   def edit
   end
@@ -32,6 +40,7 @@ class NextsController < ApplicationController
   def user_selector
     
   end
+
   private
   def tweets_params
     params.require(:tweet).permit(:title, :occupation_id, :boast).merge(user_id: current_user.id)

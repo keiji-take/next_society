@@ -1,0 +1,29 @@
+<div class="side-bar">
+  <div class="side-name">
+    <% if user_signed_in? %>
+      <%= current_user.name %>さんのチャットリスト
+    <% elsif %>
+      <%= current_company.name %>さんのスカウトリスト
+    <% end %>
+  </div>
+  <div class="room-name-lists">
+    <ul class="scaut-lists">
+    <% @rooms.each do |room| %>
+      <% if user_signed_in? %>
+        <div class="scaut-box">
+          <li class="scaut-list">
+            <%= link_to room.company.company_name, room_messages_path(room) %>さん
+          </li>
+        </div>
+      <% elsif company_signed_in? %>
+        <div class="scaut-box">
+          <li class="scaut-list">
+            <%= link_to room.user.name, room_messages_path(room) %>さん
+          </li>
+        </div>
+      <% end %>
+    <% end %>
+    
+    </ul>
+  </div>
+</div>

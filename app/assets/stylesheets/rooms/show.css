@@ -6,16 +6,18 @@
   display: flex;
 }
 .side-bar{
-  background-color: gray;
+  background-color: rgb(185, 185, 185);
   width: 280px;
 }
-.side-head{
-  background-color: navy;
+.side-name{
+  background-color: gray;
   color: #f8f8f8;
   height: 80px;
 }
 
-
+.main-content{
+  height: calc(100vh - 80px);
+}
 
 .messages-viewer{
   width: calc(100vw - 280px);
