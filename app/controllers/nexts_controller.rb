@@ -20,7 +20,9 @@ class NextsController < ApplicationController
     end
   end
   def show
-    @rooms = Room.where(user_id: @tweet.user.id).where(company_id: current_company.id)
+    if company_signed_in?
+      @rooms = Room.where(user_id: @tweet.user.id).where(company_id: current_company.id)
+    end
   end
   def edit
   end
