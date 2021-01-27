@@ -7,13 +7,11 @@
   width: 100%;
   min-width: 800px;
   height: 100%;
-  background-color: #f5f5f5;
   margin: 0 auto;
 }
 .sign-up{
   font-size: 70px;
   text-align: center;
-  background-color: #f5f5f5;
 }
 /* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
@@ -110,5 +108,11 @@
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+}
+.change-page{
+  color: rgb(115, 192, 223);
+  font-size: 18px;
+  float: right;
+  margin-right: 30px;
 }
 

@@ -11,7 +11,7 @@
         <li><%= link_to 'chat一覧', rooms_path(current_company.id), class:"new-tweet"%></li>
           <li><%= link_to current_company.name, destroy_company_session_path, method: :delete, class:"login-btn"%></li>
         <% else %>
-          <li><%= link_to '投稿する', new_user_registration_path, class:"new-tweet"%></li>
+          <li><%= link_to '投稿する', user_session_path, class:"new-tweet"%></li>
           <li><%= link_to 'サインイン', user_selector_nexts_path , class:"login-btn"%></li>
         <% end %>
       </ul>
