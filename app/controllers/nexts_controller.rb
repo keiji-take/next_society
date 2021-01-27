@@ -1,12 +1,8 @@
 class NextsController < ApplicationController
   before_action :set_action, only: [:show, :edit, :update, :destroy]
+
   def index
     @tweets = Tweet.includes(:user).order('created_at DESC')
-    if user_signed_in?
-      
-    elsif company_signed_in?
-      
-    end
   end
   def new
     @tweet = Tweet.new
@@ -38,7 +34,9 @@ class NextsController < ApplicationController
     redirect_to root_path
   end
   def user_selector
-    
+  end
+  def search
+    @tweets = Tweet.search(params[:search]).includes(:user).order('created_at DESC')
   end
 
   private
@@ -48,4 +46,5 @@ class NextsController < ApplicationController
   def set_action
     @tweet = Tweet.find(params[:id])
   end
+
 end

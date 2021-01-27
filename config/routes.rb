@@ -14,10 +14,11 @@ Rails.application.routes.draw do
   }
   
   root to: "nexts#index"
-
+  
   resources :nexts do
     collection do
       get 'user_selector'
+      get 'search'
     end
   end
   resources :users, only: [:show, :edit, :update]
