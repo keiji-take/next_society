@@ -8,5 +8,11 @@ class Tweet < ApplicationRecord
   end
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :occupation
-  
+  def self.search(search)
+    if search != ""
+      Tweet.where('boast LIKE(?)', "%#{search}%").or(Tweet.where('title LIKE(?)', "%#{search}%"))
+    else
+      Tweet.all
+    end
+  end
 end
