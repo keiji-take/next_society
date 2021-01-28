@@ -15,21 +15,9 @@
       </form>
     </div>
     <div class="low">
-      <div class="left-bar">
-        <%#= link_to image_tag("test-image.png", class:"test-image") %>
-        <ul class="job-list">
-          <li class="ocu-list" ><%= link_to '企画', "#" %></li>
-          <li class="ocu-list" ><%= link_to 'マーケティング', "#" %></li>
-          <li class="ocu-list" ><%= link_to '資格', "#" %></li>
-          <li class="ocu-list" ><%= link_to 'エンジニア', "#" %></li>
-          <li class="ocu-list" ><%= link_to 'デザイナー', "#" %></li>
-          <li class="ocu-list" ><%= link_to 'ライター', "#" %></li>
-          <li class="ocu-list" ><%= link_to 'クリエイター', "#" %></li>
-          <li class="ocu-list" ><%= link_to 'その他', "#" %></li>
-        </ul>
-      </div>
+      <%= render "category" %>
+      
       <div class="main-bar">
-        
         <ul class="tweet-lists">
           <% @tweets.each do |tweet| %>
             <li class="tweet-box">
