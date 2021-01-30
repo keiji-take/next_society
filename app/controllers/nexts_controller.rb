@@ -38,6 +38,9 @@ class NextsController < ApplicationController
   def search
     @tweets = Tweet.search(params[:search]).includes(:user).order('created_at DESC')
   end
+  def category
+    @tweets = Tweet.where(occupation_id: params[:id]).includes(:user).order('created_at DESC')
+  end
 
   private
   def tweets_params

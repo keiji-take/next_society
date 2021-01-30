@@ -1,0 +1,62 @@
+
+<%= render "shared/header" %>
+
+  <div class="main-index">
+    <div class="search-back">
+      <%= form_tag(search_nexts_path, method: :get, class:"search-form") do %>
+        <%= text_field_tag :search, '', class:"search-box", placeholder:"キーワードから探す" %>
+        <%= image_submit_tag 'search.png', class:"search-button", name: nil %>
+      <% end %>
+      <%# <form class="search-form" action="http://localhost:3000">
+        <input type='search' class='search-box' placeholder='キーワードから探す'>
+        <button type="submit" class="search-button"> %>
+          <%#= image_tag "search.png", class:"search-icon" %>
+        <%# </button> %>
+      </form>
+    </div>
+    <div class="low">
+      <%= render "category" %>
+      
+      <div class="main-bar">
+        <ul class="tweet-lists">
+          <% @tweets.each do |tweet| %>
+            <li class="tweet-box">
+              
+              <div class="tweet-list">
+                <div class="tweet-left">
+                  <div class="user-img">
+                    <% if tweet.user.image != nil %>
+                      <%= link_to image_tag("noname-icon.png", class:"tweet-user-icon"), user_path(tweet.user.id) %>
+                    <% else %>
+                      <%= link_to tweet.user.image, user_path(tweet.user.id), class:"tweet-user-icon" if tweet.user.image.attached?%>
+                    <% end %>
+                  </div>
+                  <div class="left-bottom">
+                    <%= tweet.user.name %>
+                  </div>
+                </div>
+                <div class="tweet-right"> 
+                <%= link_to next_path(tweet.id) do %>
+                  <div class="tweet-info">
+                    <span class="tweet-title">
+                      <%= tweet.title %>
+                    </span>
+                    <div class="tweet-occupation">
+                      <%= tweet.occupation.name %>
+                    </div>
+                    <div class="tweet-boast">
+                      <%= tweet.boast %>
+                    </div>
+                  </div>
+                <% end %>
+                </div>
+              </div>
+              
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="right-bar">
+      </div>
+    </div>
+  </div>
