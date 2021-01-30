@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   }
   
   root to: "nexts#index"
-  
+  get '/nexts/category/:id', to: "nexts#category"
   resources :nexts do
     collection do
       get 'user_selector'
