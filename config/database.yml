@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: next_society_production
-  username: next_society
-  password: <%= ENV['NEXT_SOCIETY_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
