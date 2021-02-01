@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :tweets
   has_many :rooms
-  has_many :company, through: :user_companies
+  
   def was_attached?
     image.attached?
   end

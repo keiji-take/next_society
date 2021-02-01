@@ -12,16 +12,15 @@
 | location                        |integer | null: false |
 | tel_number                      | string | null: false |
 | profile                         | text   | null: false |
-| occupation                      |integer | null: false |
+| occupation_id                   |integer | null: false |
 
 ### Association
-- has_many :nexts
+- has_many :tweets
 - has_many :rooms
-- has_many :chats
 
 
 
-## nextsテーブル
+## tweetsテーブル
 |    column             |  type   |   options   |
 | --------------------- | ------  | ----------- |
 | title                 | string  | null: false |
@@ -44,22 +43,18 @@
 | tel_number                      | string | null: false |
 
 ### Association
-- has_many :chats
 - has_many :rooms
 
 
 
-## chatsテーブル
+## messagesテーブル
 |    column                       |  type  |    options  |
 | ------------------------------- | ------ | ----------- |
-| message                         | string | null: false |
-| user                            |references|null: false, foreign_key: true|
-| company                         |references|null: false, foreign_key: true|
+| content                         | text   | null: false |
 | room                            |references|null: false, foreign_key: true|
+| is_user                         |boolean |             |
 
 ### Association
-- belongs_to :company
-- belongs_to :user
 - belongs_to :room
 
 
@@ -67,24 +62,11 @@
 ## roomsテーブル
 |    column                       |  type  |    options  |
 | ------------------------------- | ------ | ----------- |
-| room_name                       | string | null: false |
-
-### Association
-- has_many :chats
-- has_many :users
-- has_many :companies
-- has_many :room_users
-
-
-
-## room_usersテーブル
-|    column                       |  type  |    options  |
-| ------------------------------- | ------ | ----------- |
 | user                            |references|null: false, foreign_key: true|
 | company                         |references|null: false, foreign_key: true|
-| room                            |references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :company
+- has_many :messages
 - belongs_to :user
-- belongs_to :room
+- belongs_to :company
+ 
