@@ -29,7 +29,7 @@
     <% if message.is_user %>
       <div class="upper-comment">
         <div class="comment-user">
-          <%= @rooms.name %>
+          <%= message.room.user.name %>
         </div>
         <div class="create-time">
           <%= l message.created_at %>
