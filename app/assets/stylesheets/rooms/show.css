@@ -1,7 +1,5 @@
 .main-back{
   background-color: #f8f8f8;
-  height: calc(100vh - 80px);
-  width: 100vw;
   margin-top: 80px;
   display: flex;
 }
@@ -16,7 +14,7 @@
 }
 
 .main-content{
-  height: calc(100vh - 80px);
+  
 }
 
 .messages-viewer{
@@ -27,5 +25,4 @@
   background-color: lightgray;
   width: calc(100vw - 280px);
   height: 80px;
-
 }

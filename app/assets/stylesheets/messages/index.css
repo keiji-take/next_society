@@ -1,6 +1,6 @@
 .chat-box{
   background-color: #dddddd;
-  height: 90px;
+  height: 80px;
   padding: 20px 40px;
   display: flex;
 }
@@ -12,7 +12,7 @@
   display: flex;
 }
 .message{
-  padding-bottom: 40px;
+  padding-top: 28px;
 }
 .upper-comment{
   display: flex;
@@ -43,4 +43,7 @@
   height: 50px;
   font-size: 16px;
   padding: 0 20px;
+}
+.comment-f{
+  margin-left: 10px;
 }
