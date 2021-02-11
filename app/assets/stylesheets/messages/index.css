@@ -12,24 +12,7 @@
   display: flex;
 }
 .message{
-  padding-bottom: 40px;
-}
-.upper-comment{
-  display: flex;
-  padding-top: 10px;
-}
-.comment-user{
-  font-size: 16px;
-  margin-right: 10px;
-}
-.create-time{
-  color: #999;
-  font-size: 14px;
-}
-.comment{
-  font-size: 14px;
-  color: #434a54;
-  padding-top: 10px;
+  padding-top: 40px;
 }
 .commit{
   border: none;
@@ -43,4 +26,39 @@
   height: 50px;
   font-size: 16px;
   padding: 0 20px;
+}
+
+
+
+.google{
+  margin: 0 40px 0 60%;
+  
+}
+.comment-main{
+
+}
+.comment-right{
+  
+}
+.right-top{
+  
+}
+.comment-top{
+  display: flex;
+  
+  
+} 
+.comment-user{
+  font-size: 16px;
+  margin-right: 10px;
+}
+.comment-time{
+  color: #999;
+  font-size: 14px;
+}
+.comment{
+  font-size: 14px;
+  color: #434a54;
+  padding: 10px 0;
+  
 }
