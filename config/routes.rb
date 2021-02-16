@@ -25,5 +25,6 @@ Rails.application.routes.draw do
   resources :companies
   resources :rooms, only: [:create, :index] do
     resources :messages, only: [:index ,:create]
+    get 'messages/:id', to: 'messages#checked'
   end
 end

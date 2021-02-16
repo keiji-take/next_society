@@ -25,8 +25,16 @@ class MessagesController < ApplicationController
       render :index
     end
   end
-  def show
+  def checked
     binding.pry
+    @room = Room.find(params[:room_id])
+    if @room.checked
+      @room.update(checked: false)
+    else
+      @room.update(checked: true)
+    end
+    item = Room.find(params[:room_id])
+    render json: { message: item }
   end
 
   private

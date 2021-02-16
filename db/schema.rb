@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_01_16_230836) do
     t.text "content", null: false
     t.bigint "room_id", null: false
     t.boolean "is_user"
+    t.boolean "checked"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["room_id"], name: "index_messages_on_room_id"

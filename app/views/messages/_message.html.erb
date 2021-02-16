@@ -1,4 +1,4 @@
-<div class="message">
+<div class="message" data-id=<%= message.id %> data-check=<%= message.checked%> >
   <% if user_signed_in? %>
     <% if message.is_user %>
       <div class="comment-f">
